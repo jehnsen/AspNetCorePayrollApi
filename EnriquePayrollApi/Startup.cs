@@ -32,9 +32,9 @@ namespace EnriquePayrollApi
             services.AddDbContext<PayrollDbContext>(opt =>
                                                opt.UseInMemoryDatabase("PayrollDb"));
 
-            services.AddHttpsRedirection(options =>
+            services.AddHttpsRedirection(opt =>
             {
-                options.HttpsPort = 5000;
+                opt.HttpsPort = 5000;
             });
         }
 
