@@ -31,6 +31,11 @@ namespace EnriquePayrollApi
 
             services.AddDbContext<PayrollDbContext>(opt =>
                                                opt.UseInMemoryDatabase("PayrollDb"));
+
+            services.AddHttpsRedirection(options =>
+            {
+                options.HttpsPort = 5000;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
