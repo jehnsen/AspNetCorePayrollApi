@@ -29,8 +29,8 @@ namespace EnriquePayrollApi
         {
             services.AddControllers();
 
-            services.AddDbContext<PayrollDbContext>(opt =>
-                                               opt.UseInMemoryDatabase("PayrollDb"));
+            services.AddDbContext<PayrollDbContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
 
             services.AddHttpsRedirection(opt =>
             {

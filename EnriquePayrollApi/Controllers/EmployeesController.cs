@@ -25,6 +25,7 @@ namespace EnriquePayrollApi.Controllers
         public async Task<ActionResult<IEnumerable<Employee>>> GetEmployees()
         {
             return await _context.Employees.ToListAsync();
+        
         }
 
         // GET: api/Employees/5
